@@ -71,7 +71,10 @@ pip install -r requirements.txt
 python -m src.train        # train the PPO agent -> models/ppo_6g_model.zip
 python -m src.evaluate     # evaluate vs. baseline, regenerate the CSV
 streamlit run app.py       # interactive dashboard
+python -m tests.test_agent # verify the trained model (energy / deficit / latency targets)
 ```
+
+The verification script must be run as a module from the repository root, as shown above — invoking it by file path (`python tests/test_agent.py`) breaks its imports.
 
 ## Limitations and future work
 
